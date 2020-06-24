@@ -3,11 +3,18 @@ let path = require("path");
 let cookieParser = require("cookie-parser");
 let logger = require("morgan");
 let cors = require("cors");
+require("dotenv").config();
 
 let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
 
 let app = express();
+
+mongodConnect = process.env.MONGOURI;
+mongoose.connect(mongodConnect, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.use(cors());
 app.use(logger("dev"));
