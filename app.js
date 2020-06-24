@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 let logger = require("morgan");
 let cors = require("cors");
 require("dotenv").config();
+const mongoose = require("mongoose");
 
 let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
