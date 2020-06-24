@@ -1,6 +1,7 @@
 let express = require("express");
 let path = require("path");
 let cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 let logger = require("morgan");
 let cors = require("cors");
 require("dotenv").config();
@@ -18,6 +19,8 @@ mongoose.connect(mongodConnect, {
 
 app.use(cors());
 app.use(logger("dev"));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
