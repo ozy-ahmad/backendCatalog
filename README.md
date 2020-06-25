@@ -33,10 +33,10 @@
 
 ### Photo Scheme
 
-| Method | endpoint           | Description      |
-| ------ | ------------------ | ---------------- |
-| GET    | `/photo/getPhoto`  | get blocked data |
-| POST   | `/photo/postPhoto` | blocked user     |
+| Method | endpoint           | Description    |
+| ------ | ------------------ | -------------- |
+| GET    | `/photo/getPhoto`  | get photo data |
+| POST   | `/photo/postPhoto` | post photo     |
 
 | Field users  |
 | ------------ |
